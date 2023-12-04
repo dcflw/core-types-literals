@@ -1,0 +1,48 @@
+{
+  "name": "core-types-literals",
+  "version": "1.0.0",
+  "description": "Convert literal objects in JSON, YAML, or TOML, to core-types",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "types": "dist/src/index.d.cts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/src/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/src/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --clean --experimental-dts --format esm,cjs",
+    "format": "prettier --write . --cache",
+    "lint": "eslint --cache .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "keywords": ["core-types", "converter", "json", "yaml", "toml"],
+  "author": "Docfield Team <docfield.com>",
+  "license": "ISC",
+  "dependencies": {
+    "core-types": "^3.1.0",
+    "toml": "^3.0.0",
+    "yaml": "^2.3.4"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.38.3",
+    "@tsconfig/recommended": "^1.0.3",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "json2toml": "^6.0.0",
+    "prettier": "^3.1.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.2",
+    "vitest": "^0.34.6"
+  }
+}
