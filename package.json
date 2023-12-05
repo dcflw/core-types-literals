@@ -1,6 +1,6 @@
 {
   "name": "core-types-literals",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert literal objects in JSON, YAML, or TOML, to core-types",
   "type": "module",
   "main": "dist/index.cjs",
