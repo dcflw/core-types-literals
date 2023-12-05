@@ -32,6 +32,7 @@
     "toml": "^3.0.0",
     "yaml": "^2.3.4"
   },
+  "files": ["dist", "src", "README.md", "LICENSE"],
   "devDependencies": {
     "@microsoft/api-extractor": "^7.38.3",
     "@tsconfig/recommended": "^1.0.3",
